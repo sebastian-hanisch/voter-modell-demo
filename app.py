@@ -83,7 +83,7 @@ st.markdown(
     """
 **Zehntes Stück** der Reihe „Netzwerkanalyse“ und zweites des **Anpassungs-Arms**: wie in Stück 9 gleichen sich die Betriebe an, aber nicht durch Mittelung, sondern durch **Übernehmen**. Zwei Verfahren konkurrieren in einem Netz von Subunternehmern und Lieferanten (zum Beispiel das alte und das neue); in jedem Schritt übernimmt ein Betrieb das Verfahren eines zufälligen Partners. Irgendwann nutzen **alle dasselbe**: der Konsens ist sicher, aber **welches Verfahren gewinnt, ist Zufall**.
 
-Die Kernfrage: **Wer gewinnt, und wie lange dauert es?** Der Hook: **die Aktualisierungsregel ändert den Gewinner.** Auf demselben Netz und mit demselben Start (zum Beispiel zehn Hubs für das neue Verfahren) hängt die Gewinnchance daran, *wer* aktualisiert wird: bei der **Knotenregel** zählt ein Betrieb mit seiner Partnerzahl, bei der **Kantenregel** zählt jeder gleich, bei der **Invasionsregel** zählt er mit dem Kehrwert. Alle drei Chancen sind exakt bekannt. Dazu die Brücke zu [Stück 9](https://sebastianhanisch-meinungsbildung-demo.streamlit.app/): im Mittel macht die Knotenregel dasselbe wie die DeGroot-Mittelung, im Einzelfall ist es ein Münzwurf mit diesen Gewichten. Die Ergebnisse sind **Modellbefunde**, keine Aussagen über die Wirklichkeit.
+Die Kernfrage: **Wer gewinnt, und wie lange dauert es?** Der Hook: **die Aktualisierungsregel ändert die Gewinnchance.** Auf demselben Netz und mit demselben Start (zum Beispiel zehn Hubs für das neue Verfahren) hängt die Gewinnchance daran, *wer* aktualisiert wird: bei der **Knotenregel** zählt ein Betrieb mit seiner Partnerzahl, bei der **Kantenregel** zählt jeder gleich, bei der **Invasionsregel** zählt er mit dem Kehrwert. Alle drei Chancen sind exakt bekannt. Dazu die Brücke zu [Stück 9](https://sebastianhanisch-meinungsbildung-demo.streamlit.app/): im Mittel macht die Knotenregel dasselbe wie die DeGroot-Mittelung (Kanten- und Invasionsregel gewichten anders), im Einzelfall ist es ein Münzwurf mit diesen Gewichten. Die Ergebnisse sind **Modellbefunde**, keine Aussagen über die Wirklichkeit.
 
 Weiter unten: drei Experimente (**🔬**), der Abschnitt **🚧 Wo die Annahmen enden** und der Expander **📐 Mathematische Formulierung**.
 """
@@ -169,7 +169,7 @@ st.markdown("---")
 # --- Experimente ---------------------------------------------------------------------------------------------------------------------------
 
 n_exp, c_exp = settings.n, settings.c
-st.subheader("🔬 Experiment 1: Die Regel ändert den Gewinner")
+st.subheader("🔬 Experiment 1: Die Regel ändert die Gewinnchance")
 st.caption(f"Sechs Netztypen, n = {n_exp}, c = {c_exp}: erst haben nur die zehn Hubs Verfahren 1, dann die Hälfte der Betriebe am Rand (mit den wenigsten Partnern). Balken: exakte Chance (Formel), Raute: Häufigkeit aus {C.LIVE_RUNS} Läufen je Netz und {len(C.LIVE_SEEDS)} festen Netzen.")
 
 
@@ -237,7 +237,7 @@ st.markdown(
 | **Gleiche Wahrscheinlichkeit je Partner** | Mit ungleichem Vertrauen ändert sich das Gewicht der Betriebe; die Formeln gelten dann nicht mehr. | – |
 | **Kein spontaner Wechsel** | Wechseln Betriebe gelegentlich von selbst (Rauschen), gibt es keinen Konsens mehr, sondern eine Verteilung. | – |
 | **Festes Netz** | Das Netz ändert sich nicht mit den Verfahren. Wer sich nach Gleichgesinnten umsieht, verändert die Struktur. | Stück 12 (Standortwahl) |
-| **Zeitformel nur unkorreliert** | Die Vorhersage n μ₁² / μ₂ ist für Netze ohne Gradkorrelationen hergeleitet; in Ring und Gitter gilt sie nicht (Experiment 3 misst das nur an wenigen Läufen). | – |
+| **Zeitformel nur unkorreliert** | Die Vorhersage n μ₁² / μ₂ ist für Netze ohne Gradkorrelationen hergeleitet; im Gitter gilt sie nicht, im Ring weicht sie um bis zu 40 % ab (Experiment 3 misst das nur an wenigen Läufen). | – |
 | **Stichproben** | Gewinnhäufigkeiten und Zeiten sind Mittel über wenige Läufe und vier feste Netze (in der README acht); die exakte Kette gibt es nur bis zehn Betriebe. | – |
 | **Modellbefund** | Die Demo zeigt Verhalten im Modell, nicht die Wirkung in der Wirklichkeit. Wie weit Meinungsmodelle echte Daten treffen, ist offen (Flache u. a. 2017). | – |
 """

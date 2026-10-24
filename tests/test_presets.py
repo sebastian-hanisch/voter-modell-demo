@@ -60,7 +60,7 @@ def test_each_preset_shows_what_its_name_says():
     assert node.settings.rule == C.R_NODE and inv.settings.rule == C.R_INVASION and edge.settings.rule == C.R_EDGE
     assert node.probs[C.R_NODE] > 4 * node.probs[C.R_EDGE] / 2 and node.probs[C.R_NODE] > 2 * node.probs[C.R_EDGE] > 4 * node.probs[C.R_INVASION]            # Knoten > 2 · Kante > 4 · Invasion
     assert node.winner == 1 and inv.winner == 0 and edge.winner == 0                                                                           # der Lauf zeigt dieselbe Geschichte (per Scan gewählt)
-    ring = an["Ring: die Regel ist egal"]
+    ring = an["Ring: die Regel ändert wenig"]
     assert ring.inst.typ == C.T_RING and max(ring.probs.values()) / min(ring.probs.values()) < 1.5
     rim = an["Mehrheit am Rand verliert oft"]
     assert rim.inst.typ == C.T_POWER and rim.ones0 == rim.m // 2 and rim.probs[C.R_NODE] < 0.35 < 0.5 == pytest.approx(rim.probs[C.R_EDGE], abs=0.01) and rim.probs[C.R_INVASION] > 0.6 and rim.winner == 0

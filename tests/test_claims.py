@@ -169,7 +169,7 @@ EXPECT = {'E1': [{'typ': 'Zufallsnetz', 'group': 'hubs', 'rule': 'node', 'formul
                                                               'nutzen alle Betriebe Verfahren 0; das war in 83,3 % der Fälle zu erwarten, der Konsens selbst war sicher. '
                                                               'Der DeGroot-Konsens (Stück 9) zum selben Start ist 0,379: genau die Chance der Knotenregel. Die Regel '
                                                               'verändert die Chance um das 6,5-Fache.'},
-             'Ring: die Regel ist egal': {'n': 60,
+             'Ring: die Regel ändert wenig': {'n': 60,
                                           'm': 60,
                                           'edges': 188,
                                           'ones0': 10,

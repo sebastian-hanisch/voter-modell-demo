@@ -80,7 +80,7 @@ PRESETS = {
     "Knotenregel: die Hubs im Vorteil": {"netztyp": T_POWER, "n": DEFAULT_N, "c": DEFAULT_C, "seed": STORY_SEED, "rule": R_NODE, "mode": M_HUBS},
     "Invasionsregel: dieselben Hubs im Nachteil": {"netztyp": T_POWER, "n": DEFAULT_N, "c": DEFAULT_C, "seed": STORY_SEED, "rule": R_INVASION, "mode": M_HUBS},
     "Kantenregel: nur der Anteil zählt": {"netztyp": T_POWER, "n": DEFAULT_N, "c": DEFAULT_C, "seed": STORY_SEED, "rule": R_EDGE, "mode": M_HUBS},
-    "Ring: die Regel ist egal": {"netztyp": T_RING, "n": DEFAULT_N, "c": DEFAULT_C, "seed": DEFAULT_SEED, "rule": R_NODE, "mode": M_HUBS},
+    "Ring: die Regel ändert wenig": {"netztyp": T_RING, "n": DEFAULT_N, "c": DEFAULT_C, "seed": DEFAULT_SEED, "rule": R_NODE, "mode": M_HUBS},
     "Mehrheit am Rand verliert oft": {"netztyp": T_POWER, "n": DEFAULT_N, "c": DEFAULT_C, "seed": STORY_SEED, "rule": R_NODE, "mode": M_RIM},
 }
 PRESET_HELP = {
@@ -88,7 +88,7 @@ PRESET_HELP = {
     "Knotenregel: die Hubs im Vorteil": "Die zehn Hubs des Potenzgesetz-Netzes beginnen mit Verfahren 1: bei der Knotenregel haben sie das Gewicht ihrer Partnerzahl.",
     "Invasionsregel: dieselben Hubs im Nachteil": "Dasselbe Netz und derselbe Start, aber die Invasionsregel gewichtet mit 1 / Partnerzahl: die Hubs haben kaum eine Chance.",
     "Kantenregel: nur der Anteil zählt": "Dasselbe Netz und derselbe Start: bei der Kantenregel zählt jeder Betrieb gleich, die zehn Hubs haben die Chance 10 / n.",
-    "Ring: die Regel ist egal": "Im fast regulären Ring sind alle Gewichte ähnlich: alle drei Regeln geben ungefähr dieselbe Chance.",
-    "Mehrheit am Rand verliert oft": "Die Hälfte der Betriebe am Rand beginnt mit Verfahren 1, die Hubs mit 0: die Mehrheit gewinnt bei der Knotenregel weniger als in der Hälfte der Fälle.",
+    "Ring: die Regel ändert wenig": "Im fast regulären Ring sind alle Gewichte ähnlich: alle drei Regeln geben ähnliche Chancen (im Preset zwischen 14,3 und 19,4 %).",
+    "Mehrheit am Rand verliert oft": "Die Hälfte der Betriebe am Rand beginnt mit Verfahren 1, die Hubs mit 0: bei der Knotenregel gewinnt diese Hälfte in weniger als der Hälfte der Fälle.",
 }
 DEFAULT_PRESET_NAME = "Zufallsnetz: die Hälfte gegen die Hälfte (Voreinstellung)"
